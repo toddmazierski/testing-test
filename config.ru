@@ -5,7 +5,7 @@ Gem.clear_paths
 
 require 'rubygems'
 require 'sinatra'
-require 'nfs.rb'
+require 'black-box-testing-puzzle.rb'
 
 set :run, false
 set :environment, :production
