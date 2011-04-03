@@ -1,0 +1,10 @@
+<div class="result">
+    <dl>
+        <dt class="current_bank_principal">New principal with your current bank:</dt>
+            <dd class="current_bank_principal"><%= @current_bank_principal.format %></dd>
+        <dt><strong>New principal</strong> with <span class="new_bank"><%= $new_bank_name %></span>:</dt>
+            <dd class="new_bank_principal"><%= @new_bank_principal.format %></dd>
+        <dt>You could be earning <strong><em>this much more</em></strong> with <span class="new_bank"><%= $new_bank_name %></span>!</dt>
+            <dd class="difference"><%= @difference.format %></dd>
+    </dl>
+</div>

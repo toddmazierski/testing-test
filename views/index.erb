@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Savings Account Comparison Tool | Black Box Software Testing Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").validate({
+                rules: {
+                    current_principal: {
+                        required: true,
+                        min: 0
+                    },
+                    current_rate_percent: {
+                        required: true,
+                        min: 0
+                    },
+                    years: {
+                        required: true,
+                        min: 1
+                    }
+                },
+                submitHandler: function(form) {
+                    $("div.result").replaceWith('<div class="result loading" />');
+                    $.ajax({
+                        type: "POST",
+                        url: "/compare",
+                        data: $(form).serialize(),
+                        success: function(result){
+                            $("div.result").replaceWith(result);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <div class="banner"><a href="/instructions">What is this?</a></div>
+    <div class="widget">
+        <div class="header">
+            <img id="flag" src="/images/flag.bmp" alt="Flag">
+            <img id="bank_name" src="/images/bank_name.png" alt="<%= $new_bank_name %>">
+        </div>
+        <h2>Savings Account Comparison Tool</h2>
+        <p>
+            <span class="new_bank"><%= $new_bank_name %></span> is currently offering an annual interest rate of <strong><%= sprintf('%.2f', $new_bank_rate_percent) %>%</strong> on new Internet savings accounts. Find out how much more you could be earning right here!</p>
+        </p>
+        <form method="post" action="/compare">
+            <p>
+                <label for="current_principal">What is your <strong>current principal</strong> amount?</label>
+                <br />
+                $<input type="text" name="current_principal" value="10000" id="current_principal" size="5" />
+            </p>
+            <p>
+                <label for="current_rate_percent">What is your <strong>current annual interest rate</strong>?</label>
+                <br />
+                <input type="text" name="current_rate_percent" value="1.00" id="current_rate_percent" size="5" />%
+            </p>
+            <p>
+                <label for="years">After how many <strong>years</strong> do you want to know what your new principal will be?</label>
+                <br />
+                <input type="text" name="years" value="3" id="years" size="5" />
+            </p>
+            <p>
+                <input type="submit" value="Compare">
+            </p>
+        </form>
+        <div class="result">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
