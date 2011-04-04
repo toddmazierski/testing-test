@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Savings Account Comparison Tool | Black Box Software Testing Puzzle</title>
+    <title>Savings Account Comparison Tool | Testing Puzzle</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -47,7 +47,7 @@
         </div>
         <h2>Savings Account Comparison Tool</h2>
         <p>
-            <span class="new_bank"><%= $new_bank_name %></span> is currently offering an annual interest rate of <strong><%= sprintf('%.2f', $new_bank_rate_percent) %>%</strong> on new Internet savings accounts. Find out how much more you could be earning right here!</p>
+            <span class="new_bank"><%= $new_bank_name %></span> is offering an annual interest rate of <strong><%= sprintf('%.2f', $new_bank_rate_percent) %>%</strong> on new online savings accounts. Find out how much more you could be earning right here!</p>
         </p>
         <form method="post" action="/compare">
             <p>
@@ -61,7 +61,7 @@
                 <input type="text" name="current_rate_percent" value="1.00" id="current_rate_percent" size="5" />%
             </p>
             <p>
-                <label for="years">After how many <strong>years</strong> do you want to know what your new principal will be?</label>
+                <label for="years">How many <strong>years</strong> do you plan to save?</label>
                 <br />
                 <input type="text" name="years" value="3" id="years" size="5" />
             </p>

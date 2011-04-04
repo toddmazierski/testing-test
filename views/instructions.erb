@@ -2,40 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Instructions | Black Box Software Testing Puzzle</title>
+    <title>Instructions | Testing Puzzle</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-    <h1>Black Box Software Testing Puzzle</h1>
-    <h2>Savings Account Comparison Tool</h2>
-    <h3>What Is This?</h3>
+    <dt><h1><a href="/">Testing Puzzle</a></h1></dt>
+        <dd><em>A sample application developed to help evaluate software testers.</em></dd>
+    <h2>The Scenario</h2>
     <p>
-        This is a sample application developed to help evaluate software testers.
+        Imagine "<%= $new_bank_name %>" has hired you test a marketing tool developed for them. They're trying to get the word out on their high annual interest rate (<%= sprintf('%.2f', $new_bank_rate_percent) %>%) on new online savings accounts. It invites potential customers to compare their current bank's rate with theirs, showing them in a comparison area how much more money they could be earning if they switched.
     </p>
-    <h3>The Scenario</h3>
+    <dt>The client has requested it be a <a href="http://en.wikipedia.org/wiki/Compound_interest">compound interest</a> calculator. The simplified formula to be used is:</dt>
+        <dd>
+            <p>
+                <img src="images/compound_interest_simplified_calculation.png" alt="Compound interest, simplified calculation">
+            </p>
+            <p>
+                <em>i</em> is the annual interest rate. <em>FV</em> and <em>PV</em> represent the future and present principal values. <em>n</em> represents the number of years.
+            </p>
+        </dd>
     <p>
-        "<%= $new_bank_name %>" has hired you test a marketing tool developed for them.  They're trying to get the word out on their high annual interest rate (<%= sprintf('%.2f', $new_bank_rate_percent) %>%) on new Internet savings accounts.
+        The minimum requirements are that it work with the latest major release of Mozilla Firefox and any popular mobile browser (Safari on iOS or Android's browser, whichever is easier for you to test with).
     </p>
-    <p>
-    The tool is essentially a compound interest calculator.  It invites potential customers to compare their current savings account annual interest rate with theirs, showing them in a comparison area how much more money they could be earning if they switched.
-    </p>
-        <h3>Instructions</h3>
+    <h2>Your Instructions</h2>
     <p> 
-        Please spend no more than 1 hour exploratory testing the application, making note of:
+        In no more than 2 hours total, please perform exploratory testing on the application, making note of:
         <ul>
             <li>The bugs you discovered</li>
-            <li>Questions you have for the client or their developers</li>
+            <li>Questions for the client (or their developers)</li>
             <li>Obstacles you encountered</li>
         </ul>
         Afterwards, please send us an e-mail with:
         <ul>
             <li>A summary of your experience</li>
-            <li>Bug reports (a description and severity level) for the bugs you discovered</li>
+            <li>A report for each bug you discovered</li>
         </ul>
     </p>
-    <h3>Qualities We're Looking For</h3>
+    <h2>What We're Looking For</h2>
     <ul>
-        <li>Clarity</li>
-        <li>Consiseness</li>
+        <li>Issues are described in a clear & concise fashion &mdash; <em>what's the bug?</em></li>
+        <li>You effectively advocate for action to be taken &mdash; <em>why does this bug matter?</em></li>
+        <li>An appropriate level of follow-up testing is demonstrated &mdash; <em>what are the larger implications of this bug?</em></li>
+    </ul>
 </body>
 </html>
