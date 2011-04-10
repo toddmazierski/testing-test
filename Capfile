@@ -3,9 +3,9 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 default_run_options[:pty] = true
 
 set :user, 'ipartners'
-set :domain, 'testing-puzzle.ipartners.com'
+set :domain, 'testing-test.ipartners.com'
 
-set :repository,  "git@ipartners.beanstalkapp.com:/black-box-testing-puzzle.git"
+set :repository,  "git@ipartners.beanstalkapp.com:/testing-test.git"
 set :deploy_to, "/home/#{user}/#{domain}"
 
 set :deploy_via, :remote_cache
