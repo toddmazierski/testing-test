@@ -25,6 +25,11 @@
                         min: 1
                     }
                 },
+                messages: {
+                    current_principal: "This field is required.",
+                    current_rate_percent: "This field is required.",
+                    years: "This field is required."
+                },
                 submitHandler: function(form) {
                     $("div.result").replaceWith('<div class="result loading" />');
                     $.ajax({
