@@ -15,9 +15,9 @@ get '/' do
 end
 
 post '/compare' do
-  @current_principal = params[:current_principal].to_f
+  @current_principal = params[:current_principal].to_i
   @current_rate_percent = params[:current_rate_percent].to_f
-  @years = params[:years].to_f
+  @years = params[:years].to_i
   
   @current_bank_principal = Currency::Money(compound_interest(@current_principal, @current_rate_percent, @years), :USD)
   @new_bank_principal = Currency::Money(compound_interest(@current_principal, $new_bank_rate_percent, @years), :USD)
