@@ -8,7 +8,7 @@ div.widget {
     padding: 8px;
     background-color: #EBEFF0;
     border: 1px solid;
-    border-color: lightgray;
+    border-color: lightGray;
 }
 
 div.header {
@@ -47,6 +47,10 @@ div.result {
 
 dd.difference {
     font-weight: bold;
+    background-color: yellow;
+    border: 2px outset yellow;
+    padding: 2px;
+    width: 48px;
 }
 
 label.error {
