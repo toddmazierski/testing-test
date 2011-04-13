@@ -14,6 +14,10 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  nil
+end
+
 post '/compare' do
   @current_principal = params[:current_principal].to_i
   @current_rate_percent = params[:current_rate_percent].to_f
