@@ -6,9 +6,9 @@ body {
 div.widget {
     width: 512px;
     padding: 8px;
-    background-color: #EBEFF0;
+    background-color: #F2F2F2;
     border: 1px solid;
-    border-color: lightGray;
+    border-color: #BBB;
 }
 
 div.header {
