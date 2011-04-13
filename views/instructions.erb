@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Instructions | Testing Puzzle</title>
+    <title>Instructions | Testing Test</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-    <dt><h1><a href="/">Testing Puzzle</a></h1></dt>
-        <dd><em>A sample application developed to help evaluate software testers.</em></dd>
+    <dt><h1><a href="/">Testing Test</a></h1></dt>
+        <dd style="font-style:italic;">A sample application developed to help evaluate software testers.</dd>
     <h2>The Scenario</h2>
     <p>
         Imagine "<%= $new_bank_name %>" has hired you test a marketing tool developed for them. They're trying to get the word out on their high annual interest rate (<%= sprintf('%.2f', $new_bank_rate_percent) %>%) on new online savings accounts. It invites potential customers to compare their current bank's rate with theirs, showing them in a comparison area how much more money they could be earning if they switched.
     </p>
-    <dt>The client has requested it be a <a href="http://en.wikipedia.org/wiki/Compound_interest">compound interest</a> calculator. The simplified formula to be used is:</dt>
+    <dt>The client has requested it be a <a href="http://en.wikipedia.org/wiki/Compound_interest">compound interest</a> calculator. The formula to be used is:</dt>
         <dd>
             <p>
                 <img src="images/compound_interest_simplified_calculation.png" alt="Compound interest, simplified calculation">
@@ -22,11 +22,17 @@
             </p>
         </dd>
     <p>
-        The minimum requirements are that it work with the latest major release of Mozilla Firefox and any popular mobile browser (Safari on iOS or Android's browser, whichever is easier for you to test with).
+        In terms of compatibility, the requirement is that it work well<sup>1</sup> with the latest major release of Mozilla Firefox and the Android browser<sup>2</sup>.
+    </p>
+    <p>
+        <ol style="font-style:italic; font-size:smaller;">
+            <li>For the purposes of this test, please refrain from load or performance testing the server. This is actually on cheap shared hosting.</li>
+            <li>For the purposes of this test, any one desktop and any one mobile browser will be acceptable. Use whatever is available to you.</li>
+        </ol>
     </p>
     <h2>Your Instructions</h2>
     <p> 
-        In no more than 2 hours total, please perform exploratory testing on the application, making note of:
+        In no more than 2 hours total, please test the application, making note of:
         <ul>
             <li>The bugs you discovered</li>
             <li>Questions for the client (or their developers)</li>
@@ -35,7 +41,7 @@
         Afterwards, please send us an e-mail with:
         <ul>
             <li>A summary of your experience</li>
-            <li>A report for each bug you discovered</li>
+            <li>Bug reports</li>
         </ul>
     </p>
     <h2>What We're Looking For</h2>
