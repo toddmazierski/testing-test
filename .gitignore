@@ -1,0 +1,2 @@
+# Ignore rbenv specification files.
+.rbenv-*
