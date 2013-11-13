@@ -1,8 +1,3 @@
-require 'rubygems'
-require 'sinatra'
-require 'currency'
-require 'erb'
-
 $new_bank_rate_percent = 2.50
 $new_bank_name = 'The Royal Bank of Sealand'
 
@@ -22,12 +17,12 @@ post '/compare' do
   @current_principal = params[:current_principal].to_i
   @current_rate_percent = params[:current_rate_percent].to_f
   @years = params[:years].to_i
-  
+
   @current_bank_principal = Currency::Money(compound_interest(@current_principal, @current_rate_percent, @years), :USD)
   @new_bank_principal = Currency::Money(compound_interest(@current_principal, $new_bank_rate_percent, @years), :USD)
-  
+
   @difference = @new_bank_principal - @current_bank_principal
-  
+
   erb :result
 end
 
